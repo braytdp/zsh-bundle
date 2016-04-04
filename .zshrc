@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/braytdp/.oh-my-zsh
+export ZSH=/Users/$USER/.oh-my-zsh
 MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 
@@ -55,7 +55,7 @@ plugins=(git vi-mode rails bundler)
 
 # User configuration
 
-export PATH="$PATH/Users/braytdp/.rvm/gems/ruby-2.1.5/bin:/Users/braytdp/.rvm/gems/ruby-2.1.5@global/bin:/Users/braytdp/.rvm/rubies/ruby-2.1.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/braytdp/.rvm/bin:/usr/local/mysql/bin"
+export PATH="$PATH:/Users/$USER/.rvm/gems/ruby-2.3.0/bin:/Users/$USER/.rvm/gems/ruby-2.3.0@global/bin:/Users/$USER/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/$USER/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,9 +83,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-
 ### ALIASES
 
 # Folder
@@ -100,7 +98,7 @@ alias quemtirei='cd ~/workspace/quem-tirei'
 alias restart='touch tmp/restart.txt'
 
 # Elasticsearch
-alias elasticsearch='open /Users/braytdp/Documents/elasticsearch-0.90.12/bin/elasticsearch'
+alias elasticsearch="open /Users/$USER/Documents/elasticsearch-0.90.12/bin/elasticsearch"
 alias reindex='bundle exec rake elasticsearch:reindex:all'
 alias reindex_inv='bundle exec rake elasticsearch:reindex:invoice'
 alias reindex_sub='bundle exec rake elasticsearch:reindex:subscription'
@@ -112,3 +110,4 @@ alias skq='bundle exec sidekiq'
 
 # Redis
 alias rds='redis-server'
+# alias ohmyzsh="mate ~/.oh-my-zsh"
